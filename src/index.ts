@@ -4,7 +4,7 @@ import { makeCreateUserController } from "./main/factories/create-user";
 
 const server = fastify()
 
-server.get('/ping', fastifyRouteAdapter(makeCreateUserController()))
+server.post('/user', fastifyRouteAdapter(makeCreateUserController()))
 
 server.listen({ port: 3000 })
 console.log('listening on port 3000 ;)')
